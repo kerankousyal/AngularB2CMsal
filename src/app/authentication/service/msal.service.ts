@@ -5,10 +5,10 @@ import { environment } from '../../../environments/environment';
 @Injectable()
 export class MSALService {
     private applicationConfig: any = {
-        clientID: 'f82d26e4-b2ad-449f-ab25-5d9fb941983d',
-        authority: 'https://login.microsoftonline.com/tfp/wsibeacb2ctest.onmicrosoft.com/B2C_1_SiUpIn',
+        clientID: 'client_id_of your_app',
+        authority: 'https://login.microsoftonline.com/tfp/demob2ccompany.onmicrosoft.com/B2C_1_Signup1',
         // 'https://login.microsoftonline.com/tfp/demob2ccompany.onmicrosoft.com/B2C_1_Signup1',
-        b2cScopes: ['https://wsibeacb2ctest.b2clogin.com/openid'],
+        b2cScopes: ['https://login.microsoftonline.com/openid'],
         redirectUrl: 'http://localhost:4200',
         extraQueryParameter: 'state=authentication'
     };
