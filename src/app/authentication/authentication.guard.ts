@@ -17,7 +17,6 @@ export class AuthenticationGuard implements CanActivate {
     if (urlParams.get('id_token') !== null || urlParams.get('id_token') !== undefined) {
       window.sessionStorage.setItem('msal.idtoken', urlParams.get('id_token'));
     }
-
     const token: string = this.authSandbox.getToken();
     if (token === null || token === undefined || token === 'null') {
       this.router.navigate(['/authentication']);

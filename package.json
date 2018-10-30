@@ -1,7 +1,6 @@
 {
   "name": "msalb2c-demo",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,6 +22,7 @@
     "@angular/router": "^4.2.4",
     "angular2-jwt": "^0.2.3",
     "core-js": "^2.4.1",
+    "crypto-js": "^3.1.9-1",
     "msal": "^0.1.7",
     "rxjs": "^5.4.2",
     "zone.js": "^0.8.14"

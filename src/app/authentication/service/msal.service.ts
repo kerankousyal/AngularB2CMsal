@@ -4,17 +4,13 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class MSALService {
-    // private applicationConfig: any = {
-    //     clientID: 'df7cc9df-8073-4017-a108-390c4ca170f0',
-    //     graphScopes: ['user.read']
-    // };
-
     private applicationConfig: any = {
-        clientID: 'ddc68d0a-7f70-4233-b295-5e676fa403e2',
-        authority: 'https://login.microsoftonline.com/tfp/demob2ccompany.onmicrosoft.com/B2C_1_Signup1',
-        b2cScopes: ['https://demob2ccompany.onmicrosoft.com/user.read'],
+        clientID: 'f82d26e4-b2ad-449f-ab25-5d9fb941983d',
+        authority: 'https://login.microsoftonline.com/tfp/wsibeacb2ctest.onmicrosoft.com/B2C_1_SiUpIn',
+        // 'https://login.microsoftonline.com/tfp/demob2ccompany.onmicrosoft.com/B2C_1_Signup1',
+        b2cScopes: ['https://wsibeacb2ctest.b2clogin.com/openid'],
         redirectUrl: 'http://localhost:4200',
-        extraQueryParameter: 'p=B2C_1_signin&scope=openid&nux=1'
+        extraQueryParameter: 'state=authentication'
     };
 
     private app: any;
@@ -47,7 +43,7 @@ export class MSALService {
     public getToken() {
         return this.app.acquireTokenSilent(this.applicationConfig.b2cScopes)
             .then(accessToken => {
-               // console.log(accessToken);
+                console.log('getToken##################' + accessToken);
                 return accessToken;
             }, error => {
                 return this.app.acquireTokenPopup(this.applicationConfig.b2cScopes)
