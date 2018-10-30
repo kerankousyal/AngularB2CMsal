@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { MSALService } from '../../service/msal.service';
 import { Router } from '@angular/router';
 import { AuthenticationSandbox } from '../../sandbox/authentication.sandbox';
-import { CryptoJS } from 'crypto-js';
 
 @Component({
   selector: 'ccw-auth',
